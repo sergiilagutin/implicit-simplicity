@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 #usage ./desugar.sh com/anadea/MyClass.scala
-scalac -Xprint:parser -d /tmp src/main/scala/$1
+scalac -Xprint:typer -d /tmp src/main/scala/$1
