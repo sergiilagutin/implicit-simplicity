@@ -2,8 +2,9 @@ package com.anadea.extensions
 
 import scala.language.implicitConversions
 
-object MethodExtension extends App {
-  implicit def richString(str: String) = new {
+object MethodExtensionImplicitClass extends App {
+
+  implicit class RichString(str: String) {
     def awesomeMethod(): Unit =
       println(s"awesomeMethod for $str")
   }

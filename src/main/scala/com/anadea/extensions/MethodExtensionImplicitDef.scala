@@ -1,10 +1,10 @@
 package com.anadea.extensions
 
 import scala.language.implicitConversions
+import scala.language.reflectiveCalls
 
-object MethodExtension2 extends App {
-
-  implicit class RichString(str: String) {
+object MethodExtensionImplicitDef extends App {
+  implicit def richString(str: String) = new {
     def awesomeMethod(): Unit =
       println(s"awesomeMethod for $str")
   }
